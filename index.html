@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人事法規追蹤儀表板</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1f2a24;
+    --ink-soft:#4d5a52;
+    --paper:#f4f1e9;
+    --paper-raised:#ffffff;
+    --line:#d9d3c1;
+    --accent:#a3512b;
+    --accent-soft:#f0e0d3;
+    --ok:#3c6e52;
+    --ok-soft:#e2ede4;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Noto Sans TC', sans-serif;
+    line-height:1.6;
+  }
+  header{
+    padding:40px 24px 28px;
+    max-width:1080px;
+    margin:0 auto;
+    border-bottom:1px solid var(--line);
+  }
+  h1{
+    font-family:'Noto Serif TC', serif;
+    font-weight:700;
+    font-size:clamp(24px,4vw,34px);
+    margin:0 0 8px;
+    letter-spacing:0.02em;
+  }
+  .subtitle{
+    color:var(--ink-soft);
+    font-size:15px;
+    max-width:640px;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:18px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .meta-pill{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 14px;
+  }
+  main{
+    max-width:1080px;
+    margin:0 auto;
+    padding:28px 24px 80px;
+  }
+  .toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    align-items:center;
+    margin-bottom:24px;
+  }
+  #search{
+    flex:1;
+    min-width:200px;
+    padding:10px 14px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--paper-raised);
+    font-size:14px;
+    font-family:inherit;
+    color:var(--ink);
+  }
+  #search:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .filter-chip{
+    border:1px solid var(--line);
+    background:var(--paper-raised);
+    color:var(--ink-soft);
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .filter-chip[aria-pressed="true"]{
+    background:var(--ink);
+    color:var(--paper);
+    border-color:var(--ink);
+  }
+  section{ margin-bottom:44px; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:14px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:8px;
+  }
+  .section-head h2{
+    font-family:'Noto Serif TC', serif;
+    font-size:19px;
+    font-weight:500;
+    margin:0;
+  }
+  .section-head span{
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .law-list{
+    display:grid;
+    gap:10px;
+  }
+  .law-card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .law-card.updated{
+    border-color:var(--accent);
+    background:linear-gradient(0deg, var(--paper-raised), var(--paper-raised));
+  }
+  .law-main{ display:flex; flex-direction:column; gap:4px; min-width:0; }
+  .law-name{
+    font-weight:500;
+    font-size:15px;
+  }
+  .law-name a{ color:inherit; text-decoration:none; border-bottom:1px dotted var(--ink-soft); }
+  .law-name a:hover{ color:var(--accent); border-color:var(--accent); }
+  .law-sub{
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .badge{
+    flex-shrink:0;
+    font-size:12px;
+    padding:5px 11px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .badge.new{ background:var(--accent-soft); color:var(--accent); font-weight:500; }
+  .badge.ok{ background:var(--ok-soft); color:var(--ok); }
+  .badge.warn{ background:#f4e9d8; color:#8a6a2c; }
+  .badge.error{ background:#f6e2e0; color:#9c3b2f; }
+  .news-list{ display:grid; gap:10px; }
+  .news-item{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 18px;
+  }
+  .news-item a{
+    color:var(--ink);
+    font-weight:500;
+    font-size:14.5px;
+    text-decoration:none;
+  }
+  .news-item a:hover{ color:var(--accent); }
+  .news-meta{
+    margin-top:6px;
+    font-size:12px;
+    color:var(--ink-soft);
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .empty-state{
+    padding:40px 20px;
+    text-align:center;
+    color:var(--ink-soft);
+    background:var(--paper-raised);
+    border:1px dashed var(--line);
+    border-radius:var(--radius);
+    font-size:14px;
+  }
+  footer{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 24px 40px;
+    color:var(--ink-soft);
+    font-size:12px;
+  }
+  @media (max-width:520px){
+    .law-card{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>人事法規追蹤儀表板</h1>
+  <p class="subtitle">彙整勞動條件、職業安全、就業與外籍勞工、保險等人事相關法規，每日自動偵測異動與相關新聞動態。</p>
+  <div class="meta-row">
+    <span class="meta-pill" id="laws-generated">法規資料更新於：讀取中…</span>
+    <span class="meta-pill" id="news-generated">新聞資料更新於：讀取中…</span>
+  </div>
+</header>
+
+<main>
+
+  <div class="toolbar">
+    <input id="search" type="text" placeholder="搜尋法規名稱…" aria-label="搜尋法規名稱">
+    <button class="filter-chip" data-filter="all" aria-pressed="true">全部</button>
+    <button class="filter-chip" data-filter="updated" aria-pressed="false">僅看有更新</button>
+  </div>
+
+  <section id="laws-section">
+    <!-- 由 JS 依 category 動態產生各分類區塊 -->
+  </section>
+
+  <section id="news-section">
+    <div class="section-head">
+      <h2>新聞與草案動態</h2>
+      <span id="news-count"></span>
+    </div>
+    <div class="news-list" id="news-list">
+      <div class="empty-state">讀取中…</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本頁僅提供異動提醒，法規正確內容與生效日期請一律以「全國法規資料庫」官方公告為準；新聞動態僅供參考，不代表法規已正式修正。
+</footer>
+
+<script>
+let lawsData = { laws: [] };
+let newsData = { items: [] };
+let currentFilter = 'all';
+let currentSearch = '';
+
+function formatDateTime(iso){
+  if(!iso) return '尚未執行過';
+  const d = new Date(iso);
+  if(isNaN(d)) return iso;
+  return d.toLocaleString('zh-TW', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' });
+}
+
+function lawStatusBadge(law){
+  if(law.fetch_error){
+    if(law.fetch_error.includes('尚未設定')){
+      return '<span class="badge warn">尚未設定 PCode</span>';
+    }
+    return '<span class="badge error">抓取失敗</span>';
+  }
+  if(law.updated){
+    return '<span class="badge new">近期有更新</span>';
+  }
+  return '<span class="badge ok">目前無異動</span>';
+}
+
+function renderLaws(){
+  const container = document.getElementById('laws-section');
+  container.innerHTML = '';
+
+  const filtered = lawsData.laws.filter(law => {
+    if(currentFilter === 'updated' && !law.updated) return false;
+    if(currentSearch && !law.name.includes(currentSearch)) return false;
+    return true;
+  });
+
+  if(filtered.length === 0){
+    container.innerHTML = '<div class="empty-state">沒有符合條件的法規，試試看清除搜尋或篩選條件。</div>';
+    return;
+  }
+
+  const byCategory = {};
+  filtered.forEach(law => {
+    const cat = law.category || '未分類';
+    if(!byCategory[cat]) byCategory[cat] = [];
+    byCategory[cat].push(law);
+  });
+
+  Object.keys(byCategory).forEach(cat => {
+    const laws = byCategory[cat].sort((a,b) => (b.updated - a.updated));
+    const section = document.createElement('div');
+    section.innerHTML = `
+      <div class="section-head">
+        <h2>${cat}</h2>
+        <span>${laws.length} 項</span>
+      </div>
+      <div class="law-list"></div>
+    `;
+    const list = section.querySelector('.law-list');
+    laws.forEach(law => {
+      const card = document.createElement('div');
+      card.className = 'law-card' + (law.updated ? ' updated' : '');
+      const nameHtml = law.view_url
+        ? `<a href="${law.view_url}" target="_blank" rel="noopener">${law.name}</a>`
+        : law.name;
+      const dateLine = law.last_amend_date
+        ? `最新修正日期：${law.last_amend_date}`
+        : (law.fetch_error || '尚無資料');
+      card.innerHTML = `
+        <div class="law-main">
+          <div class="law-name">${nameHtml}</div>
+          <div class="law-sub">${dateLine}</div>
+        </div>
+        ${lawStatusBadge(law)}
+      `;
+      list.appendChild(card);
+    });
+    container.appendChild(section);
+  });
+}
+
+function renderNews(){
+  const list = document.getElementById('news-list');
+  const countEl = document.getElementById('news-count');
+  const items = newsData.items || [];
+  countEl.textContent = items.length ? `共 ${items.length} 則` : '';
+
+  if(items.length === 0){
+    list.innerHTML = '<div class="empty-state">目前沒有偵測到相關新聞，等待下一次排程執行。</div>';
+    return;
+  }
+
+  list.innerHTML = '';
+  items.slice(0, 40).forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'news-item';
+    el.innerHTML = `
+      <a href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+      <div class="news-meta">
+        ${item.is_new ? '<span class="badge new">新出現</span>' : ''}
+        <span>關鍵字：${item.keyword}</span>
+        ${item.source ? `<span>來源：${item.source}</span>` : ''}
+        ${item.pub_date ? `<span>${item.pub_date}</span>` : ''}
+      </div>
+    `;
+    list.appendChild(el);
+  });
+}
+
+async function loadData(){
+  try{
+    const lawsRes = await fetch('data/laws_status.json', { cache: 'no-store' });
+    lawsData = await lawsRes.json();
+  }catch(e){
+    lawsData = { laws: [] };
+  }
+  try{
+    const newsRes = await fetch('data/news_feed.json', { cache: 'no-store' });
+    newsData = await newsRes.json();
+  }catch(e){
+    newsData = { items: [] };
+  }
+
+  document.getElementById('laws-generated').textContent =
+    '法規資料更新於：' + formatDateTime(lawsData.generated_at);
+  document.getElementById('news-generated').textContent =
+    '新聞資料更新於：' + formatDateTime(newsData.generated_at);
+
+  renderLaws();
+  renderNews();
+}
+
+document.getElementById('search').addEventListener('input', (e) => {
+  currentSearch = e.target.value.trim();
+  renderLaws();
+});
+
+document.querySelectorAll('.filter-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-chip').forEach(b => b.setAttribute('aria-pressed', 'false'));
+    btn.setAttribute('aria-pressed', 'true');
+    currentFilter = btn.dataset.filter;
+    renderLaws();
+  });
+});
+
+loadData();
+</script>
+
+</body>
+</html>
