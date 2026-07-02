@@ -1,5 +1,182 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-07-02T10:27:47.229359+00:00",
   "recent_window_days": 14,
-  "laws": []
+  "laws": [
+    {
+      "name": "勞動基準法",
+      "category": "勞動條件",
+      "pcode": "N0030001",
+      "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0030001",
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "勞動基準法施行細則",
+      "category": "勞動條件",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "勞工請假規則",
+      "category": "勞動條件",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "性別平等工作法",
+      "category": "勞動條件",
+      "pcode": "N0030014",
+      "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0030014",
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "職業安全衛生法",
+      "category": "職業安全",
+      "pcode": "N0060001",
+      "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0060001",
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "職業安全衛生法施行細則",
+      "category": "職業安全",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "就業服務法",
+      "category": "就業與外籍勞工",
+      "pcode": "N0090001",
+      "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0090001",
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "雇主聘僱外國人許可及管理辦法",
+      "category": "就業與外籍勞工",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "外國人從事就業服務法第四十六條第一項第八款至第十一款工作資格及審查標準",
+      "category": "就業與外籍勞工",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "勞工保險條例",
+      "category": "保險",
+      "pcode": "N0050001",
+      "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0050001",
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "就業保險法",
+      "category": "保險",
+      "pcode": "N0050021",
+      "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0050021",
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "全民健康保險法",
+      "category": "保險",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "勞工退休金條例",
+      "category": "退休與資遣",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "大量解僱勞工保護法",
+      "category": "退休與資遣",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "性騷擾防治法",
+      "category": "其他",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    },
+    {
+      "name": "個人資料保護法",
+      "category": "其他",
+      "pcode": "",
+      "view_url": null,
+      "last_amend_date": null,
+      "updated": false,
+      "updated_detected_at": null,
+      "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+      "checked_at": "2026-07-02T10:27:47.229359+00:00"
+    }
+  ]
 }
