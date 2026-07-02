@@ -1,0 +1,39 @@
+name: Daily HR Law Check
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 抓取法規異動
+        run: python scripts/check_laws.py
+
+      - name: 抓取新聞與草案動態
+        run: python scripts/check_news.py
+
+      - name: 提交異動（若有變化）
+        run: |
+          git config user.name "hr-law-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/laws_status.json data/news_feed.json
+          if git diff --cached --quiet; then
+            echo "沒有資料變化，略過提交"
+          else
+            git commit -m "chore: 自動更新法規追蹤資料 $(date -u +'%Y-%m-%d')"
+            git push
+          fi
