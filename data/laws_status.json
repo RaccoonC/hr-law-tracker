@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T02:01:03.696032+00:00",
+  "generated_at": "2026-07-03T02:45:19.104756+00:00",
   "recent_window_days": 14,
   "laws": [
     {
@@ -11,7 +11,16 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00",
+      "debug": {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0030001",
+        "status": 200,
+        "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0030001",
+        "byte_length": 85903,
+        "encoding_used": "utf-8",
+        "html_snippet_start": "<!DOCTYPE html> <html lang=\"zh-Hant-TW\"> <head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><title> 勞動基準法-全國法規資料庫 </title><link href=\"../favicon.png\" rel=\"icon\" type=\"image/png\" /><link href=\"../css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/print.css\" rel=\"stylesheet\" type=\"text/css\" /> <script src=\"/js/jquery-3.",
+        "html_snippet_around_title": "ble class=\"table\"> <tr> <th>法規名稱：</th> <td> <a id=\"hlLawName\" href=\"LawAll.aspx?pcode=N0030001\">勞動基準法</a> <span class=\"label-eng\"><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0030001\">EN</a></span> </td> </tr>"
+      }
     },
     {
       "name": "勞動基準法施行細則",
@@ -22,7 +31,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "勞工請假規則",
@@ -33,7 +42,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "性別平等工作法",
@@ -44,7 +53,16 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00",
+      "debug": {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0030014",
+        "status": 200,
+        "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0030014",
+        "byte_length": 53769,
+        "encoding_used": "utf-8",
+        "html_snippet_start": "<!DOCTYPE html> <html lang=\"zh-Hant-TW\"> <head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><title> 性別平等工作法-全國法規資料庫 </title><link href=\"../favicon.png\" rel=\"icon\" type=\"image/png\" /><link href=\"../css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/print.css\" rel=\"stylesheet\" type=\"text/css\" /> <script src=\"/js/jquery-",
+        "html_snippet_around_title": "ble class=\"table\"> <tr> <th>法規名稱：</th> <td> <a id=\"hlLawName\" href=\"LawAll.aspx?pcode=N0030014\">性別平等工作法</a> <span class=\"label-eng\"><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0030014\">EN</a></span> </td> </tr>"
+      }
     },
     {
       "name": "職業安全衛生法",
@@ -55,7 +73,16 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00",
+      "debug": {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0060001",
+        "status": 200,
+        "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0060001",
+        "byte_length": 73489,
+        "encoding_used": "utf-8",
+        "html_snippet_start": "<!DOCTYPE html> <html lang=\"zh-Hant-TW\"> <head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><title> 職業安全衛生法-全國法規資料庫 </title><link href=\"../favicon.png\" rel=\"icon\" type=\"image/png\" /><link href=\"../css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/print.css\" rel=\"stylesheet\" type=\"text/css\" /> <script src=\"/js/jquery-",
+        "html_snippet_around_title": "ble class=\"table\"> <tr> <th>法規名稱：</th> <td> <a id=\"hlLawName\" href=\"LawAll.aspx?pcode=N0060001\">職業安全衛生法</a> <span class=\"label-eng\"><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0060001\">EN</a></span> </td> </tr>"
+      }
     },
     {
       "name": "職業安全衛生法施行細則",
@@ -66,7 +93,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "就業服務法",
@@ -77,7 +104,16 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00",
+      "debug": {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0090001",
+        "status": 200,
+        "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0090001",
+        "byte_length": 76416,
+        "encoding_used": "utf-8",
+        "html_snippet_start": "<!DOCTYPE html> <html lang=\"zh-Hant-TW\"> <head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><title> 就業服務法-全國法規資料庫 </title><link href=\"../favicon.png\" rel=\"icon\" type=\"image/png\" /><link href=\"../css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/print.css\" rel=\"stylesheet\" type=\"text/css\" /> <script src=\"/js/jquery-3.",
+        "html_snippet_around_title": "ble class=\"table\"> <tr> <th>法規名稱：</th> <td> <a id=\"hlLawName\" href=\"LawAll.aspx?pcode=N0090001\">就業服務法</a> <span class=\"label-eng\"><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0090001\">EN</a></span> </td> </tr>"
+      }
     },
     {
       "name": "雇主聘僱外國人許可及管理辦法",
@@ -88,7 +124,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "外國人從事就業服務法第四十六條第一項第八款至第十一款工作資格及審查標準",
@@ -99,7 +135,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "勞工保險條例",
@@ -110,7 +146,16 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00",
+      "debug": {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0050001",
+        "status": 200,
+        "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0050001",
+        "byte_length": 91890,
+        "encoding_used": "utf-8",
+        "html_snippet_start": "<!DOCTYPE html> <html lang=\"zh-Hant-TW\"> <head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><title> 勞工保險條例-全國法規資料庫 </title><link href=\"../favicon.png\" rel=\"icon\" type=\"image/png\" /><link href=\"../css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/print.css\" rel=\"stylesheet\" type=\"text/css\" /> <script src=\"/js/jquery-3",
+        "html_snippet_around_title": "ble class=\"table\"> <tr> <th>法規名稱：</th> <td> <a id=\"hlLawName\" href=\"LawAll.aspx?pcode=N0050001\">勞工保險條例</a> <span class=\"label-eng\"><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0050001\">EN</a></span> </td> </tr>"
+      }
     },
     {
       "name": "就業保險法",
@@ -121,7 +166,16 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00",
+      "debug": {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0050021",
+        "status": 200,
+        "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0050021",
+        "byte_length": 45664,
+        "encoding_used": "utf-8",
+        "html_snippet_start": "<!DOCTYPE html> <html lang=\"zh-Hant-TW\"> <head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><title> 就業保險法-全國法規資料庫 </title><link href=\"../favicon.png\" rel=\"icon\" type=\"image/png\" /><link href=\"../css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"../css/print.css\" rel=\"stylesheet\" type=\"text/css\" /> <script src=\"/js/jquery-3.",
+        "html_snippet_around_title": "ble class=\"table\"> <tr> <th>法規名稱：</th> <td> <a id=\"hlLawName\" href=\"LawAll.aspx?pcode=N0050021\">就業保險法</a> <span class=\"label-eng\"><a href=\"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=N0050021\">EN</a></span> </td> </tr>"
+      }
     },
     {
       "name": "全民健康保險法",
@@ -132,7 +186,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "勞工退休金條例",
@@ -143,7 +197,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "大量解僱勞工保護法",
@@ -154,7 +208,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "性騷擾防治法",
@@ -165,7 +219,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     },
     {
       "name": "個人資料保護法",
@@ -176,7 +230,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-03T02:01:03.696032+00:00"
+      "checked_at": "2026-07-03T02:45:19.104756+00:00"
     }
   ]
 }
