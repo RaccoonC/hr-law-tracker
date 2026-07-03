@@ -189,6 +189,33 @@
     border-radius:var(--radius);
     font-size:14px;
   }
+  .manual-group{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    margin-bottom:12px;
+  }
+  .manual-group h3{
+    font-family:'Noto Serif TC', serif;
+    font-size:15px;
+    font-weight:500;
+    margin:0 0 8px;
+  }
+  .manual-group ul{
+    margin:0 0 10px;
+    padding-left:20px;
+    font-size:13.5px;
+    color:var(--ink-soft);
+  }
+  .manual-group li{ margin-bottom:3px; }
+  .manual-group a{
+    font-size:12.5px;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px dotted var(--accent);
+  }
+  .manual-group a:hover{ opacity:0.8; }
   footer{
     max-width:1080px;
     margin:0 auto;
@@ -232,6 +259,15 @@
     <div class="news-list" id="news-list">
       <div class="empty-state">讀取中…</div>
     </div>
+  </section>
+
+  <section id="manual-section">
+    <div class="section-head">
+      <h2>無法自動追蹤的項目</h2>
+      <span>需自行定期查看</span>
+    </div>
+    <p class="subtitle" style="margin-bottom:14px;">這些是函釋、行政規則、指引、判決整理等，全國法規資料庫沒有獨立 PCode，無法用本系統自動比對異動，建議定期直接查看官方來源。</p>
+    <div id="manual-list"></div>
   </section>
 
 </main>
@@ -349,6 +385,29 @@ function renderNews(){
   });
 }
 
+function renderManual(manualData){
+  const container = document.getElementById('manual-list');
+  if(!manualData || manualData.length === 0){
+    container.innerHTML = '<div class="empty-state">尚無資料。</div>';
+    return;
+  }
+  container.innerHTML = '';
+  manualData.forEach(group => {
+    const el = document.createElement('div');
+    el.className = 'manual-group';
+    const itemsHtml = group.items.map(i => `<li>${i}</li>`).join('');
+    const linkHtml = group.source_url
+      ? `<a href="${group.source_url}" target="_blank" rel="noopener">前往 ${group.suggested_source || '官方來源'} →</a>`
+      : '';
+    el.innerHTML = `
+      <h3>${group.category}</h3>
+      <ul>${itemsHtml}</ul>
+      ${linkHtml}
+    `;
+    container.appendChild(el);
+  });
+}
+
 async function loadData(){
   try{
     const lawsRes = await fetch('data/laws_status.json', { cache: 'no-store' });
@@ -362,6 +421,15 @@ async function loadData(){
   }catch(e){
     newsData = { items: [] };
   }
+
+  let manualData = [];
+  try{
+    const manualRes = await fetch('config/manual_watch.json', { cache: 'no-store' });
+    manualData = await manualRes.json();
+  }catch(e){
+    manualData = [];
+  }
+  renderManual(manualData);
 
   document.getElementById('laws-generated').textContent =
     '法規資料更新於：' + formatDateTime(lawsData.generated_at);
