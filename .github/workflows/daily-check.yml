@@ -2,7 +2,6 @@ name: Daily HR Law Check
 
 on:
   schedule:
-    # 這裡設定的是 UTC 時間。UTC 00:00 相當於台灣時間早上 08:00
     - cron: "0 0 * * *"
   workflow_dispatch: {}
 
@@ -20,9 +19,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: 'pip' # 加上快取，加快每次執行的速度
+          # 這裡已經把 cache: 'pip' 移除，就不會再報錯了！
 
-      # 👉 新增：安裝必要的 Python 套件
       - name: 安裝依賴套件
         run: |
           python -m pip install --upgrade pip
@@ -36,7 +34,7 @@ jobs:
 
       - name: 提交異動（若有變化）
         env:
-          TZ: Asia/Taipei # 👉 新增：設定為台灣時區，讓 commit 紀錄符合在地時間
+          TZ: Asia/Taipei
         run: |
           git config user.name "hr-law-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -45,7 +43,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "沒有資料變化，略過提交"
           else
-            # 使用台灣時間標註 commit
             git commit -m "chore: 自動更新法規追蹤資料 $(date +'%Y-%m-%d %H:%M')"
             git push
           fi
