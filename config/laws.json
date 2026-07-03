@@ -1,98 +1,96 @@
 [
-  {
-    "category": "勞動條件",
-    "name": "勞動基準法",
-    "pcode": "N0030001",
-    "note": ""
-  },
-  {
-    "category": "勞動條件",
-    "name": "勞動基準法施行細則",
-    "pcode": "",
-    "note": "請至 law.moj.gov.tw 搜尋法規名稱，複製網址中 pcode= 後面的值"
-  },
-  {
-    "category": "勞動條件",
-    "name": "勞工請假規則",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "勞動條件",
-    "name": "性別平等工作法",
-    "pcode": "N0030014",
-    "note": ""
-  },
-  {
-    "category": "職業安全",
-    "name": "職業安全衛生法",
-    "pcode": "N0060001",
-    "note": ""
-  },
-  {
-    "category": "職業安全",
-    "name": "職業安全衛生法施行細則",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "就業與外籍勞工",
-    "name": "就業服務法",
-    "pcode": "N0090001",
-    "note": ""
-  },
-  {
-    "category": "就業與外籍勞工",
-    "name": "雇主聘僱外國人許可及管理辦法",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "就業與外籍勞工",
-    "name": "外國人從事就業服務法第四十六條第一項第八款至第十一款工作資格及審查標準",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "保險",
-    "name": "勞工保險條例",
-    "pcode": "N0050001",
-    "note": ""
-  },
-  {
-    "category": "保險",
-    "name": "就業保險法",
-    "pcode": "N0050021",
-    "note": ""
-  },
-  {
-    "category": "保險",
-    "name": "全民健康保險法",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "退休與資遣",
-    "name": "勞工退休金條例",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "退休與資遣",
-    "name": "大量解僱勞工保護法",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "其他",
-    "name": "性騷擾防治法",
-    "pcode": "",
-    "note": ""
-  },
-  {
-    "category": "其他",
-    "name": "個人資料保護法",
-    "pcode": "",
-    "note": ""
-  }
+  { "category": "勞動契約與勞動條件", "name": "勞動基準法", "pcode": "N0030001", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "最低工資法", "pcode": "N0030028", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "勞動事件法", "pcode": "B0010064", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "就業服務法", "pcode": "N0090001", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "大量解僱勞工保護法", "pcode": "N0020012", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "中高齡者及高齡者就業促進法", "pcode": "N0090055", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "外國專業人才延攬及僱用法", "pcode": "A0030295", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "勞動基準法施行細則", "pcode": "", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "勞動事件法施行細則", "pcode": "", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "大量解僱勞工保護法施行細則", "pcode": "", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "中高齡者及高齡者就業促進法施行細則", "pcode": "", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "外國專業人才延攬及僱用法施行細則", "pcode": "", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "勞工請假規則", "pcode": "", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "天然災害停止上班及上課作業辦法", "pcode": "", "note": "" },
+  { "category": "勞動契約與勞動條件", "name": "技術生訓練辦法", "pcode": "", "note": "" },
+
+  { "category": "招募與聘僱", "name": "性別平等工作法", "pcode": "N0030014", "note": "" },
+  { "category": "招募與聘僱", "name": "身心障礙者權益保障法", "pcode": "D0050046", "note": "" },
+  { "category": "招募與聘僱", "name": "原住民族工作權保障法", "pcode": "D0130006", "note": "" },
+  { "category": "招募與聘僱", "name": "性別平等工作法施行細則", "pcode": "", "note": "" },
+  { "category": "招募與聘僱", "name": "工作場所性騷擾防治措施準則", "pcode": "", "note": "" },
+  { "category": "招募與聘僱", "name": "雇主聘僱外國人許可及管理辦法", "pcode": "", "note": "" },
+  { "category": "招募與聘僱", "name": "外國人從事就業服務許可辦法", "pcode": "", "note": "" },
+  { "category": "招募與聘僱", "name": "外國特定專業人才減免所得稅辦法", "pcode": "", "note": "" },
+  { "category": "招募與聘僱", "name": "外國專業人才申請就業金卡許可辦法", "pcode": "", "note": "" },
+  { "category": "招募與聘僱", "name": "外國人從事就業服務法第四十六條第一項第八款至第十一款工作資格及審查標準", "pcode": "", "note": "" },
+
+  { "category": "工時薪資休假", "name": "最低工資審議辦法", "pcode": "", "note": "" },
+
+  { "category": "社會保險", "name": "勞工保險條例", "pcode": "N0050001", "note": "" },
+  { "category": "社會保險", "name": "勞工職業災害保險及保護法", "pcode": "N0050031", "note": "" },
+  { "category": "社會保險", "name": "就業保險法", "pcode": "N0050021", "note": "" },
+  { "category": "社會保險", "name": "勞工退休金條例", "pcode": "N0030020", "note": "" },
+  { "category": "社會保險", "name": "全民健康保險法", "pcode": "L0060001", "note": "" },
+  { "category": "社會保險", "name": "勞工保險條例施行細則", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "勞工職業災害保險及保護法施行細則", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "就業保險法施行細則", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "勞工退休金條例施行細則", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "全民健康保險法施行細則", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "勞工退休金月提繳辦法", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "勞工退休金個人專戶管理辦法", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "勞工保險被保險人請領各項保險給付辦法", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "育嬰留職停薪津貼實施辦法", "pcode": "", "note": "" },
+  { "category": "社會保險", "name": "勞工退休金請領辦法", "pcode": "", "note": "" },
+
+  { "category": "職業安全衛生", "name": "職業安全衛生法", "pcode": "N0060001", "note": "" },
+  { "category": "職業安全衛生", "name": "勞動檢查法", "pcode": "N0070001", "note": "" },
+  { "category": "職業安全衛生", "name": "職業安全衛生法施行細則", "pcode": "", "note": "" },
+  { "category": "職業安全衛生", "name": "勞動檢查法施行細則", "pcode": "", "note": "" },
+  { "category": "職業安全衛生", "name": "職業安全衛生設施規則", "pcode": "", "note": "" },
+  { "category": "職業安全衛生", "name": "勞工健康保護規則", "pcode": "", "note": "" },
+  { "category": "職業安全衛生", "name": "職業安全衛生教育訓練規則", "pcode": "", "note": "" },
+  { "category": "職業安全衛生", "name": "危害性化學品標示及通識規則", "pcode": "", "note": "" },
+  { "category": "職業安全衛生", "name": "危害性化學品評估及分級管理辦法", "pcode": "", "note": "" },
+  { "category": "職業安全衛生", "name": "母性健康保護實施辦法", "pcode": "", "note": "" },
+
+  { "category": "性別平等與友善職場", "name": "性騷擾防治法", "pcode": "D0050074", "note": "" },
+  { "category": "性別平等與友善職場", "name": "性騷擾防治法施行細則", "pcode": "", "note": "" },
+  { "category": "性別平等與友善職場", "name": "性騷擾防治準則", "pcode": "", "note": "" },
+
+  { "category": "勞資關係", "name": "工會法", "pcode": "N0020001", "note": "" },
+  { "category": "勞資關係", "name": "團體協約法", "pcode": "N0020006", "note": "" },
+  { "category": "勞資關係", "name": "勞資爭議處理法", "pcode": "N0020007", "note": "" },
+  { "category": "勞資關係", "name": "工會法施行細則", "pcode": "", "note": "" },
+  { "category": "勞資關係", "name": "團體協約法施行細則", "pcode": "", "note": "" },
+  { "category": "勞資關係", "name": "勞資爭議處理法施行細則", "pcode": "", "note": "" },
+  { "category": "勞資關係", "name": "不當勞動行為裁決辦法", "pcode": "", "note": "" },
+  { "category": "勞資關係", "name": "工會財務處理準則", "pcode": "", "note": "" },
+
+  { "category": "個人資料保護", "name": "個人資料保護法", "pcode": "I0050021", "note": "" },
+  { "category": "個人資料保護", "name": "個人資料保護法施行細則", "pcode": "", "note": "" },
+  { "category": "個人資料保護", "name": "個人資料檔案安全維護管理辦法", "pcode": "", "note": "" },
+
+  { "category": "職工福利", "name": "職工福利金條例", "pcode": "N0040001", "note": "" },
+  { "category": "職工福利", "name": "職工福利金條例施行細則", "pcode": "N0040002", "note": "" },
+  { "category": "職工福利", "name": "職工福利委員會組織準則", "pcode": "", "note": "" },
+  { "category": "職工福利", "name": "職工福利金保管運用辦法", "pcode": "", "note": "" },
+
+  { "category": "人力發展與訓練", "name": "職業訓練法", "pcode": "N0080001", "note": "" },
+  { "category": "人力發展與訓練", "name": "職業訓練法施行細則", "pcode": "", "note": "" },
+
+  { "category": "稅務", "name": "所得稅法", "pcode": "G0340003", "note": "" },
+  { "category": "稅務", "name": "所得基本稅額條例", "pcode": "", "note": "" },
+  { "category": "稅務", "name": "各類所得扣繳率標準", "pcode": "", "note": "正式名稱可能與清單略有出入，請自行確認" },
+
+  { "category": "民刑事法", "name": "民法", "pcode": "B0000001", "note": "整部民法涵蓋範圍極廣，若只需僱傭、委任、承攬相關條文，建議直接連到官網查該編章節" },
+  { "category": "民刑事法", "name": "民事訴訟法", "pcode": "", "note": "" },
+  { "category": "民刑事法", "name": "強制執行法", "pcode": "", "note": "" },
+  { "category": "民刑事法", "name": "中華民國刑法", "pcode": "", "note": "整部刑法涵蓋範圍極廣，若只需營業秘密、偽造文書、侵占、背信相關條文，建議直接連到官網查該編章節" },
+
+  { "category": "公司治理", "name": "公司法", "pcode": "J0080001", "note": "" },
+  { "category": "公司治理", "name": "證券交易法", "pcode": "", "note": "僅上市櫃公司適用" },
+  { "category": "公司治理", "name": "公開發行公司建立內部控制制度處理準則", "pcode": "", "note": "" },
+  { "category": "公司治理", "name": "公益揭弊者保護法", "pcode": "", "note": "" }
 ]
