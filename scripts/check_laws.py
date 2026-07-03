@@ -71,6 +71,22 @@ def save_json(path, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+import html as html_module
+
+
+def strip_tags(raw_html):
+    """把 HTML 標籤去掉，只留文字內容，並把多個空白/換行合併成一個空白。
+    這樣「修正日期：</th> <td> 民國 113 年 ... </td>」這種被標籤隔開的內容，
+    去除標籤後會變成「修正日期： 民國 113 年 ...」，才比對得到。
+    """
+    text = re.sub(r"<script[^>]*>.*?</script>", " ", raw_html, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html_module.unescape(text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
 def fetch_amend_date(pcode):
     """回傳 (民國年月日字串或None, 錯誤訊息或None, debug資訊dict)"""
     url = LAW_URL_TEMPLATE.format(pcode=pcode)
@@ -97,17 +113,17 @@ def fetch_amend_date(pcode):
     except Exception as e:  # noqa: BLE001
         return None, f"未知錯誤：{e}", debug
 
-    m = DATE_PATTERN.search(html)
+    text = strip_tags(html)
+    m = DATE_PATTERN.search(text)
     if not m:
         # 找不到預期格式時，把抓到的內容前後各存一小段，方便排查
         # （例如判斷是不是被導向錯誤頁、驗證頁，或格式跟預期不同）
-        snippet = re.sub(r"\s+", " ", html).strip()
-        debug["html_snippet_start"] = snippet[:500]
-        debug["html_snippet_around_title"] = None
-        title_idx = html.find("法規名稱")
+        debug["text_snippet_start"] = text[:500]
+        debug["text_snippet_around_title"] = None
+        title_idx = text.find("法規名稱")
         if title_idx != -1:
-            around = re.sub(r"\s+", " ", html[max(0, title_idx - 50): title_idx + 300]).strip()
-            debug["html_snippet_around_title"] = around
+            around = text[max(0, title_idx - 50): title_idx + 300]
+            debug["text_snippet_around_title"] = around
         return None, "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）", debug
 
     roc_year, month, day = m.groups()
