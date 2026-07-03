@@ -72,31 +72,47 @@ def save_json(path, data):
 
 
 def fetch_amend_date(pcode):
-    """回傳 (民國年月日字串, 錯誤訊息或 None)"""
+    """回傳 (民國年月日字串或None, 錯誤訊息或None, debug資訊dict)"""
     url = LAW_URL_TEMPLATE.format(pcode=pcode)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    debug = {"url": url}
     try:
         with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+            debug["status"] = resp.status
+            debug["final_url"] = resp.geturl()
             raw = resp.read()
+            debug["byte_length"] = len(raw)
             # 頁面通常是 utf-8 或 big5，先試 utf-8 失敗再試 big5
             try:
                 html = raw.decode("utf-8")
+                debug["encoding_used"] = "utf-8"
             except UnicodeDecodeError:
                 html = raw.decode("big5", errors="ignore")
+                debug["encoding_used"] = "big5"
     except urllib.error.HTTPError as e:
-        return None, f"HTTP {e.code}"
+        debug["status"] = e.code
+        return None, f"HTTP {e.code}", debug
     except urllib.error.URLError as e:
-        return None, f"連線失敗：{e.reason}"
+        return None, f"連線失敗：{e.reason}", debug
     except Exception as e:  # noqa: BLE001
-        return None, f"未知錯誤：{e}"
+        return None, f"未知錯誤：{e}", debug
 
     m = DATE_PATTERN.search(html)
     if not m:
-        return None, "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）"
+        # 找不到預期格式時，把抓到的內容前後各存一小段，方便排查
+        # （例如判斷是不是被導向錯誤頁、驗證頁，或格式跟預期不同）
+        snippet = re.sub(r"\s+", " ", html).strip()
+        debug["html_snippet_start"] = snippet[:500]
+        debug["html_snippet_around_title"] = None
+        title_idx = html.find("法規名稱")
+        if title_idx != -1:
+            around = re.sub(r"\s+", " ", html[max(0, title_idx - 50): title_idx + 300]).strip()
+            debug["html_snippet_around_title"] = around
+        return None, "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）", debug
 
     roc_year, month, day = m.groups()
     date_str = f"民國{roc_year}年{int(month):02d}月{int(day):02d}日"
-    return date_str, None
+    return date_str, None, debug
 
 
 def main():
@@ -132,11 +148,12 @@ def main():
             results.append(entry)
             continue
 
-        date_str, error = fetch_amend_date(pcode)
+        date_str, error, debug = fetch_amend_date(pcode)
         time.sleep(SLEEP_BETWEEN_REQUESTS)
 
         if error:
             entry["fetch_error"] = error
+            entry["debug"] = debug  # 除錯用，排查穩定後可以移除這欄
             # 抓取失敗時保留上次的資料，不覆蓋掉
             results.append(entry)
             continue
