@@ -1,0 +1,66 @@
+[
+  {
+    "category": "勞動部函釋與行政規則",
+    "items": [
+      "勞動部重要解釋令（依主題分類）",
+      "勞動部函釋（工時、工資、請假、契約、解僱、退休、性平、職安等）",
+      "勞動部行政規則、作業要點",
+      "勞動檢查重點及裁罰基準",
+      "工作規則核備相關規定",
+      "勞動契約認定指導原則",
+      "部分工時勞工僱用管理參考指引"
+    ],
+    "suggested_source": "勞動部勞動法令查詢系統",
+    "source_url": "https://laws.mol.gov.tw/"
+  },
+  {
+    "category": "職業安全衛生指引",
+    "items": [
+      "執行職務遭受不法侵害預防指引",
+      "異常工作負荷促發疾病預防指引",
+      "人因性危害預防指引",
+      "職場霸凌防治措施指引",
+      "承攬管理指引",
+      "女性勞工母性健康保護指引"
+    ],
+    "suggested_source": "勞動部職業安全衛生署法規專區（指引）",
+    "source_url": "https://www.osha.gov.tw/48110/48713/"
+  },
+  {
+    "category": "保險機關函釋",
+    "items": [
+      "勞保局重要函釋",
+      "健保署重要函釋",
+      "勞工退休金重要函釋"
+    ],
+    "suggested_source": "勞動部勞工保險局全球資訊網",
+    "source_url": "https://www.bli.gov.tw/"
+  },
+  {
+    "category": "統計分級表（僅供參考，非追蹤對象）",
+    "items": [
+      "勞工保險投保薪資分級表",
+      "勞工退休金月提繳工資分級表",
+      "全民健康保險投保金額分級表"
+    ],
+    "suggested_source": "勞動部勞工保險局全球資訊網",
+    "source_url": "https://www.bli.gov.tw/"
+  },
+  {
+    "category": "個資函釋",
+    "items": [
+      "國家發展委員會個資函釋"
+    ],
+    "suggested_source": "國家發展委員會個人資料保護專區",
+    "source_url": "https://www.ndc.gov.tw/"
+  },
+  {
+    "category": "司法判決與解釋",
+    "items": [
+      "司法院重要勞動判決整理",
+      "憲法法庭涉及勞動法的重要判決"
+    ],
+    "suggested_source": "司法院法學資料檢索系統",
+    "source_url": "https://lawsearch.judicial.gov.tw/"
+  }
+]
