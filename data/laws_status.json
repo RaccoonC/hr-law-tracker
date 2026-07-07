@@ -4,10 +4,10 @@
   "laws": [
     [
   {
-    "name": "勞動基準法施行細則",
+    "name": "勞動基準法",
     "category": "勞動契約與勞動條件",
-    "pcode": "N0030002",
-    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0030002",
+    "pcode": "N0030001",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0030001",
     "last_amend_date": null,
     "updated": false,
     "updated_detected_at": null,
@@ -15,10 +15,32 @@
     "checked_at": "2026-07-03T03:22:01.885305+00:00"
   },
   {
-    "name": "勞動事件法施行細則",
+    "name": "最低工資法",
     "category": "勞動契約與勞動條件",
-    "pcode": "B0010065",
-    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=B0010065",
+    "pcode": "N0030028",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0030028",
+    "last_amend_date": null,
+    "updated": false,
+    "updated_detected_at": null,
+    "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+    "checked_at": "2026-07-03T03:22:01.885305+00:00"
+  },
+  {
+    "name": "勞動事件法",
+    "category": "勞動契約與勞動條件",
+    "pcode": "B0010064",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=B0010064",
+    "last_amend_date": null,
+    "updated": false,
+    "updated_detected_at": null,
+    "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+    "checked_at": "2026-07-03T03:22:01.885305+00:00"
+  },
+  {
+    "name": "大量解僱勞工保護法",
+    "category": "勞動契約與勞動條件",
+    "pcode": "N0020012",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0020012",
     "last_amend_date": null,
     "updated": false,
     "updated_detected_at": null,
@@ -37,10 +59,10 @@
     "checked_at": "2026-07-03T03:22:01.885305+00:00"
   },
   {
-    "name": "中高齡者及高齡者就業促進法施行細則",
+    "name": "中高齡者及高齡者就業促進法",
     "category": "勞動契約與勞動條件",
-    "pcode": "N0090056",
-    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0090056",
+    "pcode": "N0090055",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0090055",
     "last_amend_date": null,
     "updated": false,
     "updated_detected_at": null,
@@ -48,10 +70,21 @@
     "checked_at": "2026-07-03T03:22:01.885305+00:00"
   },
   {
-    "name": "外國專業人才延攬及僱用法施行細則",
+    "name": "外國專業人才延攬及僱用法",
     "category": "勞動契約與勞動條件",
-    "pcode": "A0030296",
-    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=A0030296",
+    "pcode": "A0030295",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=A0030295",
+    "last_amend_date": null,
+    "updated": false,
+    "updated_detected_at": null,
+    "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+    "checked_at": "2026-07-03T03:22:01.885305+00:00"
+  },
+  {
+    "name": "勞動基準法施行細則",
+    "category": "勞動契約與勞動條件",
+    "pcode": "N0030002",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0030002",
     "last_amend_date": null,
     "updated": false,
     "updated_detected_at": null,
@@ -70,10 +103,21 @@
     "checked_at": "2026-07-03T03:22:01.885305+00:00"
   },
   {
+    "name": "中高齡者及高齡者就業促進法施行細則",
+    "category": "勞動契約與勞動條件",
+    "pcode": "N0090056",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0090056",
+    "last_amend_date": null,
+    "updated": false,
+    "updated_detected_at": null,
+    "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
+    "checked_at": "2026-07-03T03:22:01.885305+00:00"
+  },
+  {
     "name": "天然災害停止上班及上課作業辦法",
     "category": "勞動契約與勞動條件",
-    "pcode": "A0020084",
-    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=A0020084",
+    "pcode": "S0110022",
+    "view_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=S0110022",
     "last_amend_date": null,
     "updated": false,
     "updated_detected_at": null,
