@@ -5,8 +5,26 @@ check_laws.py
 
 用途：
     讀取 config/laws.json 中列出的法規（以「全國法規資料庫」的 PCode 標示），
-    逐一抓取該法規的「修正日期/公布日期」，並與上次執行時記錄下來的日期比對。
+    逐一抓取該法規的「修正日期」，並與上次執行時記錄下來的日期比對。
     如果日期不同，代表該法規有異動，會在 data/laws_status.json 中標記 updated = true。
+
+注意事項（請務必先讀）：
+    1. 全國法規資料庫的內容「每週五」才會整批更新一次，所以就算每天執行，
+       實際偵測到異動的時間點也大概是每週五之後才會出現。
+    2. 全國法規資料庫的一般網頁對自動化存取有 robots 限制，本腳本改用其
+       「列印精簡版」頁面（?media=print），並：
+         - 加上識別用的 User-Agent
+         - 每次請求之間 sleep，降低對主機的負擔
+         - 一次只抓取設定檔中列出的法規，不做大量爬取
+       如果日後這個方式失效（例如頁面改版、被擋），請改用官方 Open API
+       （https://law.moj.gov.tw/api/）下載整批 JSON 再自行過濾，
+       或考慮改為「手動比對＋網頁提醒你該去查了」的半自動模式。
+    3. 本腳本僅擷取「修正日期」這個中繼資料欄位做比對，不會、也不應該
+       用來重製法規全文（避免法律時效性與著作權疑慮），完整條文請一律
+       連回官方網站查看。
+
+輸出：
+    data/laws_status.json
 """
 
 import json
@@ -17,7 +35,6 @@ import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
-import html as html_module
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_PATH = os.path.join(BASE_DIR, "config", "laws.json")
@@ -27,26 +44,30 @@ LAW_URL_TEMPLATE = "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcod
 LAW_VIEW_URL_TEMPLATE = "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode={pcode}"
 
 USER_AGENT = (
-    "HR-Law-Tracker/1.1 (+personal use, HR compliance tracking; "
+    "HR-Law-Tracker/1.0 (+personal use, HR compliance tracking; "
     "low-frequency daily check; contact: repo owner)"
 )
 
-# 💡【優化1】修正正則表達式：涵蓋「修正日期」、「公布日期」、「發布日期」與「廢止日期」
+# 修正日期／公發布日 通常會以「民國 000 年 00 月 00 日」的格式出現
 DATE_PATTERN = re.compile(
-    r"(?:修正日期|公布日期|發布日期|廢止日期)\s*[:：]?\s*民國\s*(\d{1,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
+    r"(?:修正日期|公發布日|廢止日期)\s*[:：]?\s*民國\s*(\d{1,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
 )
 
 REQUEST_TIMEOUT = 15
 SLEEP_BETWEEN_REQUESTS = 3  # 秒，避免高頻率打官方網站
 RECENT_WINDOW_DAYS = 14  # 標記為「有更新」的天數，之後自動退回一般顯示
-MAX_RETRIES = 3 # 💡【優化2】設定連線失敗時的最大重試次數
 
 
 def load_json(path, default):
     if not os.path.exists(path):
         return default
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, UnicodeDecodeError) as e:
+        print(f"警告：{path} 內容無法解析（{e}），改用預設空值繼續執行。"
+              f"這個檔案接下來會被本次執行的結果覆蓋掉。")
+        return default
 
 
 def save_json(path, data):
@@ -55,8 +76,14 @@ def save_json(path, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+import html as html_module
+
+
 def strip_tags(raw_html):
-    """把 HTML 標籤去掉，只留文字內容，並把多個空白/換行合併成一個空白。"""
+    """把 HTML 標籤去掉，只留文字內容，並把多個空白/換行合併成一個空白。
+    這樣「修正日期：</th> <td> 民國 113 年 ... </td>」這種被標籤隔開的內容，
+    去除標籤後會變成「修正日期： 民國 113 年 ...」，才比對得到。
+    """
     text = re.sub(r"<script[^>]*>.*?</script>", " ", raw_html, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"<[^>]+>", " ", text)
@@ -70,53 +97,39 @@ def fetch_amend_date(pcode):
     url = LAW_URL_TEMPLATE.format(pcode=pcode)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     debug = {"url": url}
-    html = ""
-    
-    # 💡【優化2】加入自動重試機制，對抗政府網站的偶發性連線不穩定
-    for attempt in range(MAX_RETRIES):
-        try:
-            with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
-                debug["status"] = resp.status
-                debug["final_url"] = resp.geturl()
-                raw = resp.read()
-                debug["byte_length"] = len(raw)
-                
-                try:
-                    html = raw.decode("utf-8")
-                    debug["encoding_used"] = "utf-8"
-                except UnicodeDecodeError:
-                    html = raw.decode("big5", errors="ignore")
-                    debug["encoding_used"] = "big5"
-                
-                break # 成功取得 html 就跳出重試迴圈
-                
-        except urllib.error.HTTPError as e:
-            if e.code == 404: # 404 找不到網頁，重試也沒用，直接中斷
-                debug["status"] = e.code
-                return None, f"HTTP {e.code} 網頁不存在", debug
-            if attempt == MAX_RETRIES - 1:
-                return None, f"HTTP {e.code} (已重試 {MAX_RETRIES} 次)", debug
-            time.sleep(SLEEP_BETWEEN_REQUESTS)
-            
-        except Exception as e:
-            if attempt == MAX_RETRIES - 1:
-                return None, f"連線錯誤：{e} (已重試 {MAX_RETRIES} 次)", debug
-            time.sleep(SLEEP_BETWEEN_REQUESTS)
-
-    if not html:
-        return None, "無法取得網頁內容", debug
+    try:
+        with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
+            debug["status"] = resp.status
+            debug["final_url"] = resp.geturl()
+            raw = resp.read()
+            debug["byte_length"] = len(raw)
+            # 頁面通常是 utf-8 或 big5，先試 utf-8 失敗再試 big5
+            try:
+                html = raw.decode("utf-8")
+                debug["encoding_used"] = "utf-8"
+            except UnicodeDecodeError:
+                html = raw.decode("big5", errors="ignore")
+                debug["encoding_used"] = "big5"
+    except urllib.error.HTTPError as e:
+        debug["status"] = e.code
+        return None, f"HTTP {e.code}", debug
+    except urllib.error.URLError as e:
+        return None, f"連線失敗：{e.reason}", debug
+    except Exception as e:  # noqa: BLE001
+        return None, f"未知錯誤：{e}", debug
 
     text = strip_tags(html)
     m = DATE_PATTERN.search(text)
-    
     if not m:
+        # 找不到預期格式時，把抓到的內容前後各存一小段，方便排查
+        # （例如判斷是不是被導向錯誤頁、驗證頁，或格式跟預期不同）
         debug["text_snippet_start"] = text[:500]
         debug["text_snippet_around_title"] = None
         title_idx = text.find("法規名稱")
         if title_idx != -1:
             around = text[max(0, title_idx - 50): title_idx + 300]
             debug["text_snippet_around_title"] = around
-        return None, "頁面中找不到修正日期或公布日期欄位（需要人工確認）", debug
+        return None, "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）", debug
 
     roc_year, month, day = m.groups()
     date_str = f"民國{roc_year}年{int(month):02d}月{int(day):02d}日"
@@ -161,16 +174,19 @@ def main():
 
         if error:
             entry["fetch_error"] = error
-            entry["debug"] = debug
+            entry["debug"] = debug  # 除錯用，排查穩定後可以移除這欄
+            # 抓取失敗時保留上次的資料，不覆蓋掉
             results.append(entry)
             continue
 
         entry["last_amend_date"] = date_str
 
         if prev.get("last_amend_date") and prev["last_amend_date"] != date_str:
+            # 偵測到修正日期改變 -> 標記為有更新
             entry["updated"] = True
             entry["updated_detected_at"] = now_iso
         elif prev.get("updated_detected_at"):
+            # 檢查是否還在「近期更新」的顯示視窗內
             try:
                 detected = datetime.fromisoformat(prev["updated_detected_at"])
                 if (now - detected).days <= RECENT_WINDOW_DAYS:
