@@ -43,8 +43,13 @@ MAX_TOTAL_ITEMS = 150
 def load_json(path, default):
     if not os.path.exists(path):
         return default
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, UnicodeDecodeError) as e:
+        print(f"警告：{path} 內容無法解析（{e}），改用預設空值繼續執行。"
+              f"這個檔案接下來會被本次執行的結果覆蓋掉。")
+        return default
 
 
 def save_json(path, data):
