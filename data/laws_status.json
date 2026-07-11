@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T13:36:11.635119+00:00",
+  "generated_at": "2026-07-11T01:47:29.624911+00:00",
   "recent_window_days": 14,
   "laws": [
     {
@@ -11,7 +11,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "最低工資法",
@@ -22,14 +22,14 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00",
+      "checked_at": "2026-07-11T01:47:29.624911+00:00",
       "debug": {
         "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0030028",
         "status": 200,
         "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0030028",
         "byte_length": 23195,
         "encoding_used": "utf-8",
-        "text_snippet_start": "最低工資法（112.12.27制定）-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/10 21:36 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 最低工資法（112.12.27制定） EN 公布日期： 民國 112 年 12 月 27 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動條件及就業平等目 所有條文 條號查詢 條文檢索 沿革 立法歷程(附帶決議) ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 1 條 為確保勞工合理之最低工資，提高勞工及其家庭之生活水準，促進勞資和諧，特制定本法。 最低工資事項，依本法之規定；本法未規定者，適用勞動基準法及其他相關法律之規定。 第 2 條 本法之主管機關：在中央為勞動部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 3 條 本法之適用對象為適用勞動基準法之勞工。 本法所稱勞工、雇主、工資及事業單位之定義，依勞動基準法第",
+        "text_snippet_start": "最低工資法（112.12.27制定）-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/11 09:47 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 最低工資法（112.12.27制定） EN 公布日期： 民國 112 年 12 月 27 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動條件及就業平等目 所有條文 條號查詢 條文檢索 沿革 立法歷程(附帶決議) ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 1 條 為確保勞工合理之最低工資，提高勞工及其家庭之生活水準，促進勞資和諧，特制定本法。 最低工資事項，依本法之規定；本法未規定者，適用勞動基準法及其他相關法律之規定。 第 2 條 本法之主管機關：在中央為勞動部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 3 條 本法之適用對象為適用勞動基準法之勞工。 本法所稱勞工、雇主、工資及事業單位之定義，依勞動基準法第",
         "text_snippet_around_title": "中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 最低工資法（112.12.27制定） EN 公布日期： 民國 112 年 12 月 27 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動條件及就業平等目 所有條文 條號查詢 條文檢索 沿革 立法歷程(附帶決議) ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 1 條 為確保勞工合理之最低工資，提高勞工及其家庭之生活水準，促進勞資和諧，特制定本法。 最低工資事項，依本法之規定；本法未規定者，適用勞動基準法及其他相關法律之規定。 第 2 條 本法之主管機關：在中央為勞動部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 3 條 本法之適用對象為適用勞動"
       }
     },
@@ -42,7 +42,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "就業服務法",
@@ -53,7 +53,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "大量解僱勞工保護法",
@@ -64,7 +64,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "中高齡者及高齡者就業促進法",
@@ -75,7 +75,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "外國專業人才延攬及僱用法",
@@ -86,7 +86,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞動基準法施行細則",
@@ -97,7 +97,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞動事件法施行細則",
@@ -108,7 +108,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "大量解僱勞工保護法施行細則",
@@ -119,7 +119,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "中高齡者及高齡者就業促進法施行細則",
@@ -130,7 +130,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "外國專業人才延攬及僱用法施行細則",
@@ -141,7 +141,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工請假規則",
@@ -152,7 +152,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "天然災害停止上班及上課作業辦法",
@@ -163,7 +163,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "技術生訓練辦法",
@@ -174,7 +174,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "性別平等工作法",
@@ -185,7 +185,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "身心障礙者權益保障法",
@@ -196,7 +196,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "原住民族工作權保障法",
@@ -207,7 +207,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "性別平等工作法施行細則",
@@ -218,7 +218,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "工作場所性騷擾防治措施準則",
@@ -229,7 +229,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "雇主聘僱外國人許可及管理辦法",
@@ -240,7 +240,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "外國人從事就業服務許可辦法",
@@ -251,7 +251,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "外國特定專業人才減免所得稅辦法",
@@ -262,7 +262,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "外國特定專業人才申請就業金卡許可辦法",
@@ -273,7 +273,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "外國人從事就業服務法第四十六條第一項第八款至第十款工作資格及審查標準",
@@ -284,7 +284,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "外國人從事就業服務法第四十六條第一項第一款至第六款工作資格及審查標準",
@@ -295,7 +295,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "最低工資審議辦法",
@@ -306,7 +306,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工保險條例",
@@ -317,7 +317,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工職業災害保險及保護法",
@@ -328,14 +328,14 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00",
+      "checked_at": "2026-07-11T01:47:29.624911+00:00",
       "debug": {
         "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0050031",
         "status": 200,
         "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0050031",
         "byte_length": 105351,
         "encoding_used": "utf-8",
-        "text_snippet_start": "勞工職業災害保險及保護法-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/10 21:37 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 勞工職業災害保險及保護法 EN 公布日期： 民國 110 年 04 月 30 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動保險目 所有條文 編章節 條號查詢 條文檢索 授權子法 沿革 立法歷程(附帶決議) ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 一 章 總則 第 1 條 為保障遭遇職業災害勞工及其家屬之生活，加強職業災害預防及職業災害勞工重建，以促進社會安全，特制定本法。 第 2 條 本法所稱主管機關：在中央為勞動部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 二 章 職業災害保險 第 一 節 保險人、基金管理、保險監理及爭議處理 第 3 條 勞工職業災害保險（以下簡稱本保險）以勞動部勞工保險局為保險人，辦理保險業務",
+        "text_snippet_start": "勞工職業災害保險及保護法-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/11 09:49 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 勞工職業災害保險及保護法 EN 公布日期： 民國 110 年 04 月 30 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動保險目 所有條文 編章節 條號查詢 條文檢索 授權子法 沿革 立法歷程(附帶決議) ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 一 章 總則 第 1 條 為保障遭遇職業災害勞工及其家屬之生活，加強職業災害預防及職業災害勞工重建，以促進社會安全，特制定本法。 第 2 條 本法所稱主管機關：在中央為勞動部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 二 章 職業災害保險 第 一 節 保險人、基金管理、保險監理及爭議處理 第 3 條 勞工職業災害保險（以下簡稱本保險）以勞動部勞工保險局為保險人，辦理保險業務",
         "text_snippet_around_title": "中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 勞工職業災害保險及保護法 EN 公布日期： 民國 110 年 04 月 30 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動保險目 所有條文 編章節 條號查詢 條文檢索 授權子法 沿革 立法歷程(附帶決議) ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 一 章 總則 第 1 條 為保障遭遇職業災害勞工及其家屬之生活，加強職業災害預防及職業災害勞工重建，以促進社會安全，特制定本法。 第 2 條 本法所稱主管機關：在中央為勞動部；在直轄市為直轄市政府；在縣（市）為縣（市）政府。 第 二 章 職業災害保險 第 一 節 保險人、基金管理、保險監理及爭議處理 第"
       }
     },
@@ -348,7 +348,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工退休金條例",
@@ -359,7 +359,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "全民健康保險法",
@@ -370,7 +370,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工保險條例施行細則",
@@ -381,7 +381,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工職業災害保險及保護法施行細則",
@@ -392,7 +392,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "就業保險法施行細則",
@@ -403,7 +403,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工退休金條例施行細則",
@@ -414,7 +414,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "全民健康保險法施行細則",
@@ -425,7 +425,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工退休金月提繳辦法",
@@ -436,7 +436,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工退休金個人專戶管理辦法",
@@ -447,7 +447,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工保險被保險人請領各項保險給付辦法",
@@ -458,7 +458,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "育嬰留職停薪實施辦法",
@@ -469,7 +469,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工退休金請領辦法",
@@ -480,7 +480,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職業安全衛生法",
@@ -491,7 +491,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞動檢查法",
@@ -502,7 +502,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職業安全衛生法施行細則",
@@ -513,7 +513,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞動檢查法施行細則",
@@ -524,7 +524,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職業安全衛生設施規則",
@@ -535,7 +535,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞工健康保護規則",
@@ -546,7 +546,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職業安全衛生教育訓練規則",
@@ -557,7 +557,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "危害性化學品標示及通識規則",
@@ -568,7 +568,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "危害性化學品評估及分級管理辦法",
@@ -579,14 +579,14 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00",
+      "checked_at": "2026-07-11T01:47:29.624911+00:00",
       "debug": {
         "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0060070",
         "status": 200,
         "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0060070",
         "byte_length": 19726,
         "encoding_used": "utf-8",
-        "text_snippet_start": "危害性化學品評估及分級管理辦法-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/10 21:39 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 危害性化學品評估及分級管理辦法 發布日期： 民國 103 年 12 月 31 日 法規類別： 行政 ＞ 勞動部 ＞ 職業安全衛生目 所有條文 條號查詢 條文檢索 沿革 ※歷史法規係提供九十年四月以後法規修正之歷次完整舊條文。 ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 1 條 本辦法依職業安全衛生法第十一條第二項規定訂定之。 第 2 條 本辦法用詞，定義如下： 一、暴露評估：指以定性、半定量或定量之方法，評量或估算勞工暴露於化學品之健康危害情形。 二、分級管理：指依化學品健康危害及暴露評估結果評定風險等級，並分級採取對應之控制或管理措施。 第 3 條 本辦法所定化學品，優先適用特定化學物質危害預防標準、有機溶劑中毒預防規則",
+        "text_snippet_start": "危害性化學品評估及分級管理辦法-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/11 09:50 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 危害性化學品評估及分級管理辦法 發布日期： 民國 103 年 12 月 31 日 法規類別： 行政 ＞ 勞動部 ＞ 職業安全衛生目 所有條文 條號查詢 條文檢索 沿革 ※歷史法規係提供九十年四月以後法規修正之歷次完整舊條文。 ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 1 條 本辦法依職業安全衛生法第十一條第二項規定訂定之。 第 2 條 本辦法用詞，定義如下： 一、暴露評估：指以定性、半定量或定量之方法，評量或估算勞工暴露於化學品之健康危害情形。 二、分級管理：指依化學品健康危害及暴露評估結果評定風險等級，並分級採取對應之控制或管理措施。 第 3 條 本辦法所定化學品，優先適用特定化學物質危害預防標準、有機溶劑中毒預防規則",
         "text_snippet_around_title": "中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 危害性化學品評估及分級管理辦法 發布日期： 民國 103 年 12 月 31 日 法規類別： 行政 ＞ 勞動部 ＞ 職業安全衛生目 所有條文 條號查詢 條文檢索 沿革 ※歷史法規係提供九十年四月以後法規修正之歷次完整舊條文。 ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 1 條 本辦法依職業安全衛生法第十一條第二項規定訂定之。 第 2 條 本辦法用詞，定義如下： 一、暴露評估：指以定性、半定量或定量之方法，評量或估算勞工暴露於化學品之健康危害情形。 二、分級管理：指依化學品健康危害及暴露評估結果評定風險等級，並分級採取對應之控制或管理措施。 第 3"
       }
     },
@@ -599,7 +599,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "性騷擾防治法",
@@ -610,7 +610,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "性騷擾防治法施行細則",
@@ -621,7 +621,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "性騷擾防治準則",
@@ -632,7 +632,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "工會法",
@@ -643,7 +643,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "團體協約法",
@@ -654,7 +654,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞資爭議處理法",
@@ -665,7 +665,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "工會法施行細則",
@@ -676,7 +676,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "團體協約法施行細則",
@@ -687,7 +687,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "勞資爭議調解辦法",
@@ -698,7 +698,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "不當勞動行為裁決辦法",
@@ -709,7 +709,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "工會財務處理準則",
@@ -720,14 +720,14 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00",
+      "checked_at": "2026-07-11T01:47:29.624911+00:00",
       "debug": {
         "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0020014",
         "status": 200,
         "final_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode=N0020014",
         "byte_length": 30060,
         "encoding_used": "utf-8",
-        "text_snippet_start": "工會財務處理準則-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/10 21:40 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 工會財務處理準則 EN 發布日期： 民國 100 年 04 月 29 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動關係目 附檔： 附表：會計科目及說明表.PDF 附表：會計科目及說明表.DOC 所有條文 編章節 條號查詢 條文檢索 沿革 ※歷史法規係提供九十年四月以後法規修正之歷次完整舊條文。 ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 一 章 總則 第 1 條 本準則依工會法（以下簡稱本法）第三十條第二項規定訂定之。 第 2 條 工會之財務處理，除其他法律另有規定外，依本準則之規定辦理。 第 3 條 工會之會計年度採曆年制，自每年一月一日起至十二月三十一日止。 第 4 條 工會之會計基礎，採用權責發生制；平時採用現金收付制者，年終結算時",
+        "text_snippet_start": "工會財務處理準則-全國法規資料庫 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態 列印時間：115/07/11 09:51 ::: 現在位置： 首頁 中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 工會財務處理準則 EN 發布日期： 民國 100 年 04 月 29 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動關係目 附檔： 附表：會計科目及說明表.PDF 附表：會計科目及說明表.DOC 所有條文 編章節 條號查詢 條文檢索 沿革 ※歷史法規係提供九十年四月以後法規修正之歷次完整舊條文。 ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 一 章 總則 第 1 條 本準則依工會法（以下簡稱本法）第三十條第二項規定訂定之。 第 2 條 工會之財務處理，除其他法律另有規定外，依本準則之規定辦理。 第 3 條 工會之會計年度採曆年制，自每年一月一日起至十二月三十一日止。 第 4 條 工會之會計基礎，採用權責發生制；平時採用現金收付制者，年終結算時",
         "text_snippet_around_title": "中央法規 所有條文 P 下載 友善列印 加入資料夾： 儲存 確定 新增資料夾 管理資料夾 所有條文 法規名稱： 工會財務處理準則 EN 發布日期： 民國 100 年 04 月 29 日 法規類別： 行政 ＞ 勞動部 ＞ 勞動關係目 附檔： 附表：會計科目及說明表.PDF 附表：會計科目及說明表.DOC 所有條文 編章節 條號查詢 條文檢索 沿革 ※歷史法規係提供九十年四月以後法規修正之歷次完整舊條文。 ※如已配合行政院組織改造，公告變更管轄或停止辦理業務之法規條文，請詳見沿革 第 一 章 總則 第 1 條 本準則依工會法（以下簡稱本法）第三十條第二項規定訂定之。 第 2 條 工會之財務處理，除其他法律另有規定外，依本準則之規定辦理。 第 3 條 工會之會計年度採曆年制，自每年一月一日起至十二"
       }
     },
@@ -740,7 +740,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "個人資料保護法施行細則",
@@ -751,7 +751,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "個人資料檔案安全維護管理辦法",
@@ -762,7 +762,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職工福利金條例",
@@ -773,7 +773,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職工福利金條例施行細則",
@@ -784,7 +784,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職工福利委員會組織準則",
@@ -795,7 +795,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職工福利金保管運用辦法",
@@ -806,7 +806,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職業訓練法",
@@ -817,7 +817,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "職業訓練法施行細則",
@@ -828,7 +828,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "所得稅法",
@@ -839,7 +839,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "所得基本稅額條例",
@@ -850,7 +850,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "各類所得扣繳率標準",
@@ -861,7 +861,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "民法",
@@ -872,7 +872,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "民事訴訟法",
@@ -883,7 +883,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "強制執行法",
@@ -894,7 +894,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "中華民國刑法",
@@ -905,7 +905,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "公司法",
@@ -916,7 +916,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "證券交易法",
@@ -927,7 +927,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "公開發行公司建立內部控制制度處理準則",
@@ -938,7 +938,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     },
     {
       "name": "公益揭弊者保護法",
@@ -949,7 +949,7 @@
       "updated": false,
       "updated_detected_at": null,
       "fetch_error": "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上",
-      "checked_at": "2026-07-10T13:36:11.635119+00:00"
+      "checked_at": "2026-07-11T01:47:29.624911+00:00"
     }
   ]
 }
