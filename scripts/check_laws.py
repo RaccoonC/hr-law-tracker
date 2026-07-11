@@ -48,9 +48,15 @@ USER_AGENT = (
     "low-frequency daily check; contact: repo owner)"
 )
 
-# 修正日期／公發布日 通常會以「民國 000 年 00 月 00 日」的格式出現
-DATE_PATTERN = re.compile(
-    r"(?:修正日期|公發布日|廢止日期)\s*[:：]?\s*民國\s*(\d{1,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
+# 修正日期／公發布日 分開比對，因為不是每部法規都有修正過
+AMEND_PATTERN = re.compile(
+    r"修正日期\s*[:：]?\s*民國\s*(\d{1,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
+)
+PUBLISH_PATTERN = re.compile(
+    r"公\s*[（(]?\s*發\s*[）)]?\s*布日\s*[:：]?\s*民國\s*(\d{1,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
+)
+ABOLISH_PATTERN = re.compile(
+    r"廢止日期\s*[:：]?\s*民國\s*(\d{1,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
 )
 
 REQUEST_TIMEOUT = 15
@@ -92,8 +98,15 @@ def strip_tags(raw_html):
     return text
 
 
-def fetch_amend_date(pcode):
-    """回傳 (民國年月日字串或None, 錯誤訊息或None, debug資訊dict)"""
+def _format_date(match):
+    roc_year, month, day = match.groups()
+    return f"民國{roc_year}年{int(month):02d}月{int(day):02d}日"
+
+
+def fetch_law_dates(pcode):
+    """回傳 (dates_dict或None, 錯誤訊息或None, debug資訊dict)
+    dates_dict 格式: {"amend_date": str或None, "publish_date": str或None, "abolish_date": str或None}
+    """
     url = LAW_URL_TEMPLATE.format(pcode=pcode)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     debug = {"url": url}
@@ -103,7 +116,6 @@ def fetch_amend_date(pcode):
             debug["final_url"] = resp.geturl()
             raw = resp.read()
             debug["byte_length"] = len(raw)
-            # 頁面通常是 utf-8 或 big5，先試 utf-8 失敗再試 big5
             try:
                 html = raw.decode("utf-8")
                 debug["encoding_used"] = "utf-8"
@@ -119,21 +131,28 @@ def fetch_amend_date(pcode):
         return None, f"未知錯誤：{e}", debug
 
     text = strip_tags(html)
-    m = DATE_PATTERN.search(text)
-    if not m:
-        # 找不到預期格式時，把抓到的內容前後各存一小段，方便排查
-        # （例如判斷是不是被導向錯誤頁、驗證頁，或格式跟預期不同）
+
+    amend_m = AMEND_PATTERN.search(text)
+    publish_m = PUBLISH_PATTERN.search(text)
+    abolish_m = ABOLISH_PATTERN.search(text)
+
+    dates = {
+        "amend_date": _format_date(amend_m) if amend_m else None,
+        "publish_date": _format_date(publish_m) if publish_m else None,
+        "abolish_date": _format_date(abolish_m) if abolish_m else None,
+    }
+
+    if not dates["amend_date"] and not dates["publish_date"]:
+        # 兩個都找不到，才視為真正的抓取失敗
         debug["text_snippet_start"] = text[:500]
         debug["text_snippet_around_title"] = None
         title_idx = text.find("法規名稱")
         if title_idx != -1:
             around = text[max(0, title_idx - 50): title_idx + 300]
             debug["text_snippet_around_title"] = around
-        return None, "頁面中找不到修正日期欄位（頁面格式可能已變更，需要人工確認）", debug
+        return None, "頁面中找不到修正日期或公發布日欄位（頁面格式可能已變更，需要人工確認）", debug
 
-    roc_year, month, day = m.groups()
-    date_str = f"民國{roc_year}年{int(month):02d}月{int(day):02d}日"
-    return date_str, None, debug
+    return dates, None, debug
 
 
 def main():
@@ -158,6 +177,7 @@ def main():
             "pcode": pcode,
             "view_url": LAW_VIEW_URL_TEMPLATE.format(pcode=pcode) if pcode else None,
             "last_amend_date": prev.get("last_amend_date"),
+            "publish_date": prev.get("publish_date"),
             "updated": False,
             "updated_detected_at": prev.get("updated_detected_at"),
             "fetch_error": None,
@@ -169,7 +189,7 @@ def main():
             results.append(entry)
             continue
 
-        date_str, error, debug = fetch_amend_date(pcode)
+        dates, error, debug = fetch_law_dates(pcode)
         time.sleep(SLEEP_BETWEEN_REQUESTS)
 
         if error:
@@ -179,10 +199,15 @@ def main():
             results.append(entry)
             continue
 
-        entry["last_amend_date"] = date_str
+        entry["last_amend_date"] = dates["amend_date"]
+        entry["publish_date"] = dates["publish_date"]
 
-        if prev.get("last_amend_date") and prev["last_amend_date"] != date_str:
-            # 偵測到修正日期改變 -> 標記為有更新
+        # 比對用的「有效日期」：優先看修正日期，沒有修正過的話用公發布日
+        prev_effective = prev.get("last_amend_date") or prev.get("publish_date")
+        curr_effective = dates["amend_date"] or dates["publish_date"]
+
+        if prev_effective and curr_effective and prev_effective != curr_effective:
+            # 偵測到日期改變（包含「第一次被修正」這種從無修正日變成有修正日的情況）
             entry["updated"] = True
             entry["updated_detected_at"] = now_iso
         elif prev.get("updated_detected_at"):
