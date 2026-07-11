@@ -61,6 +61,5 @@
 
   { "category": "稅務", "name": "所得稅法", "pcode": "G0340003", "note": "" },
   { "category": "稅務", "name": "所得基本稅額條例", "pcode": "G0340115", "note": "" },
-  { "category": "稅務", "name": "各類所得扣繳率標準", "pcode": "G0340028", "note": "" },
-
+  { "category": "稅務", "name": "各類所得扣繳率標準", "pcode": "G0340028", "note": "" }
 ]
