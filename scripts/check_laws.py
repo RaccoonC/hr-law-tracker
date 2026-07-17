@@ -5,8 +5,18 @@ check_laws.py
 
 用途：
     讀取 config/laws.json 中列出的法規（以「全國法規資料庫」的 PCode 標示），
-    逐一抓取該法規的「修正日期」，並與上次執行時記錄下來的日期比對。
-    如果日期不同，代表該法規有異動，會在 data/laws_status.json 中標記 updated = true。
+    逐一抓取該法規的「修正日期」與「條文全文」，並與上次執行時記錄下來的
+    資料比對。
+
+    1. 修正日期／公布日期：與上次比對，若不同代表該法規有異動，
+       會在 data/laws_status.json 中標記 updated = true，並額外標記
+       newly_detected = true（僅在「這次執行才第一次偵測到」的情況下為 true，
+       用來給 Email 通知判斷要不要寄信，避免同一次異動連續 14 天每天都寄信）。
+
+    2. 條文全文：只有在「這是第一次抓到這部法規」或「修正/公布日期跟上次不一樣」
+       時，才會重新擷取全文並覆蓋 data/laws_fulltext.json 裡對應的項目；
+       如果日期沒有變化，直接沿用舊資料，不重新擷取，降低對官網的存取頻率，
+       也降低擷取邏輯萬一失敗時把舊的好資料洗掉的風險。
 
 注意事項（請務必先讀）：
     1. 全國法規資料庫的內容「每週五」才會整批更新一次，所以就算每天執行，
@@ -19,12 +29,19 @@ check_laws.py
        如果日後這個方式失效（例如頁面改版、被擋），請改用官方 Open API
        （https://law.moj.gov.tw/api/）下載整批 JSON 再自行過濾，
        或考慮改為「手動比對＋網頁提醒你該去查了」的半自動模式。
-    3. 本腳本僅擷取「修正日期」這個中繼資料欄位做比對，不會、也不應該
-       用來重製法規全文（避免法律時效性與著作權疑慮），完整條文請一律
-       連回官方網站查看。
+    3. 條文全文的擷取邏輯（extract_fulltext）是用「第 X 條」的第一次出現位置
+       當作條文本體的開始，並在常見的頁尾字樣（如「回頁首」）出現處截斷。
+       這是根據頁面一般結構寫的通用邏輯，第一次正式跑之後，建議你抽查幾筆
+       data/laws_fulltext.json 的內容，確認擷取範圍正確（沒有把導覽列雜訊
+       也存進去、也沒有把條文尾端切斷）。如果發現擷取範圍不對，這段函式
+       是最需要調整的地方，做法跟你之前調整 AMEND_PATTERN 正規表達式時一樣。
+    4. 法規本身在中華民國著作權法第 9 條規定不受著作權保護，所以重製全文
+       本身沒有著作權疑慮；但條文仍有時效性，請務必透過網頁上顯示的
+       「條文更新時間」與官方連結，提醒使用者以官方網站最新版本為準。
 
 輸出：
     data/laws_status.json
+    data/laws_fulltext.json
 """
 
 import json
@@ -39,6 +56,7 @@ from datetime import datetime, timezone
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_PATH = os.path.join(BASE_DIR, "config", "laws.json")
 DATA_PATH = os.path.join(BASE_DIR, "data", "laws_status.json")
+FULLTEXT_PATH = os.path.join(BASE_DIR, "data", "laws_fulltext.json")
 
 LAW_URL_TEMPLATE = "https://law.moj.gov.tw/LawClass/LawAll.aspx?media=print&pcode={pcode}"
 LAW_VIEW_URL_TEMPLATE = "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode={pcode}"
@@ -58,6 +76,15 @@ PUBLISH_PATTERN = re.compile(
 ABOLISH_PATTERN = re.compile(
     r"廢止日期\s*[:：]?\s*民國\s*(\d{1,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
 )
+
+# 條文本體擷取用：找「第 X 條」的第一次出現位置當作本體開始
+ARTICLE_START_PATTERN = re.compile(r"第\s*[一二三四五六七八九十百千0-9]+\s*條")
+# 條文本體常見的頁尾雜訊字樣，出現位置之後的內容一律捨棄
+FULLTEXT_FOOTER_MARKERS = [
+    "回頁首", "友善列印", "工具箱", "資料來源：全國法規資料庫",
+    "◇ 資料來源", "列印時間", "本資料庫為法務部",
+]
+FULLTEXT_MIN_LENGTH = 30  # 擷取結果太短，視為擷取失敗，不儲存
 
 REQUEST_TIMEOUT = 15
 SLEEP_BETWEEN_REQUESTS = 3  # 秒，避免高頻率打官方網站
@@ -103,8 +130,27 @@ def _format_date(match):
     return f"民國{roc_year}年{int(month):02d}月{int(day):02d}日"
 
 
-def fetch_law_dates(pcode):
-    """回傳 (dates_dict或None, 錯誤訊息或None, debug資訊dict)
+def extract_fulltext(stripped_text):
+    """從已去除 HTML 標籤的整頁文字中，嘗試截取「條文本體」部分。
+    抓不到起始位置，或擷取結果過短（研判擷取失敗），回傳 None，
+    呼叫端遇到 None 時應該沿用舊資料，而不是拿空字串覆蓋掉舊資料。
+    """
+    m = ARTICLE_START_PATTERN.search(stripped_text)
+    if not m:
+        return None
+    body = stripped_text[m.start():]
+    cut_positions = [body.find(marker) for marker in FULLTEXT_FOOTER_MARKERS]
+    cut_positions = [p for p in cut_positions if p > 0]
+    if cut_positions:
+        body = body[:min(cut_positions)]
+    body = body.strip()
+    if len(body) < FULLTEXT_MIN_LENGTH:
+        return None
+    return body
+
+
+def fetch_law_page(pcode):
+    """回傳 (dates_dict或None, fulltext字串或None, 錯誤訊息或None, debug資訊dict)
     dates_dict 格式: {"amend_date": str或None, "publish_date": str或None, "abolish_date": str或None}
     """
     url = LAW_URL_TEMPLATE.format(pcode=pcode)
@@ -124,11 +170,11 @@ def fetch_law_dates(pcode):
                 debug["encoding_used"] = "big5"
     except urllib.error.HTTPError as e:
         debug["status"] = e.code
-        return None, f"HTTP {e.code}", debug
+        return None, None, f"HTTP {e.code}", debug
     except urllib.error.URLError as e:
-        return None, f"連線失敗：{e.reason}", debug
+        return None, None, f"連線失敗：{e.reason}", debug
     except Exception as e:  # noqa: BLE001
-        return None, f"未知錯誤：{e}", debug
+        return None, None, f"未知錯誤：{e}", debug
 
     text = strip_tags(html)
 
@@ -150,9 +196,10 @@ def fetch_law_dates(pcode):
         if title_idx != -1:
             around = text[max(0, title_idx - 50): title_idx + 300]
             debug["text_snippet_around_title"] = around
-        return None, "頁面中找不到修正日期或公發布日欄位（頁面格式可能已變更，需要人工確認）", debug
+        return None, None, "頁面中找不到修正日期或公發布日欄位（頁面格式可能已變更，需要人工確認）", debug
 
-    return dates, None, debug
+    fulltext = extract_fulltext(text)
+    return dates, fulltext, None, debug
 
 
 def main():
@@ -160,16 +207,24 @@ def main():
     previous = load_json(DATA_PATH, {"laws": [], "generated_at": None})
     previous_by_name = {item["name"]: item for item in previous.get("laws", [])}
 
+    previous_fulltext = load_json(FULLTEXT_PATH, {"laws": []})
+    previous_fulltext_by_name = {item["name"]: item for item in previous_fulltext.get("laws", [])}
+
     now = datetime.now(timezone.utc)
     now_iso = now.isoformat()
 
     results = []
+    fulltext_results = {}  # name -> entry，最後轉成 list 存檔
+    fulltext_refetched = 0
+    fulltext_carried_over = 0
+    fulltext_failed = 0
 
     for law in laws:
         name = law.get("name", "")
         pcode = (law.get("pcode") or "").strip()
         category = law.get("category", "未分類")
         prev = previous_by_name.get(name, {})
+        prev_ft = previous_fulltext_by_name.get(name)
 
         entry = {
             "name": name,
@@ -179,6 +234,7 @@ def main():
             "last_amend_date": prev.get("last_amend_date"),
             "publish_date": prev.get("publish_date"),
             "updated": False,
+            "newly_detected": False,
             "updated_detected_at": prev.get("updated_detected_at"),
             "fetch_error": None,
             "checked_at": now_iso,
@@ -187,9 +243,12 @@ def main():
         if not pcode:
             entry["fetch_error"] = "尚未設定 pcode，請至 law.moj.gov.tw 搜尋此法規並補上"
             results.append(entry)
+            if prev_ft:
+                fulltext_results[name] = prev_ft
+                fulltext_carried_over += 1
             continue
 
-        dates, error, debug = fetch_law_dates(pcode)
+        dates, fulltext, error, debug = fetch_law_page(pcode)
         time.sleep(SLEEP_BETWEEN_REQUESTS)
 
         if error:
@@ -197,6 +256,9 @@ def main():
             entry["debug"] = debug  # 除錯用，排查穩定後可以移除這欄
             # 抓取失敗時保留上次的資料，不覆蓋掉
             results.append(entry)
+            if prev_ft:
+                fulltext_results[name] = prev_ft
+                fulltext_carried_over += 1
             continue
 
         entry["last_amend_date"] = dates["amend_date"]
@@ -210,6 +272,7 @@ def main():
             # 偵測到日期改變（包含「第一次被修正」這種從無修正日變成有修正日的情況）
             entry["updated"] = True
             entry["updated_detected_at"] = now_iso
+            entry["newly_detected"] = True
         elif prev.get("updated_detected_at"):
             # 檢查是否還在「近期更新」的顯示視窗內
             try:
@@ -222,6 +285,40 @@ def main():
 
         results.append(entry)
 
+        # ---- 全文處理 ----
+        dates_changed_or_missing = (
+            prev_ft is None
+            or prev_ft.get("last_amend_date") != entry["last_amend_date"]
+            or prev_ft.get("publish_date") != entry["publish_date"]
+        )
+
+        if dates_changed_or_missing and fulltext:
+            fulltext_results[name] = {
+                "name": name,
+                "category": category,
+                "pcode": pcode,
+                "last_amend_date": entry["last_amend_date"],
+                "publish_date": entry["publish_date"],
+                "content": fulltext,
+                "fulltext_updated_at": now_iso,
+                "view_url": entry["view_url"],
+            }
+            fulltext_refetched += 1
+        elif dates_changed_or_missing and not fulltext:
+            # 日期有變但這次沒擷取到全文（可能頁面結構跟預期不同），
+            # 沿用舊資料比放空好，並且印出警告方便排查
+            if prev_ft:
+                fulltext_results[name] = prev_ft
+                fulltext_carried_over += 1
+            fulltext_failed += 1
+            print(f"警告：{name}（{pcode}）日期有變動，但這次未能擷取到條文全文，"
+                  f"沿用舊資料（若無舊資料則暫缺），請檢查 extract_fulltext() 的擷取邏輯是否需要調整。")
+        else:
+            # 日期沒變，沿用舊資料，不重新擷取
+            if prev_ft:
+                fulltext_results[name] = prev_ft
+                fulltext_carried_over += 1
+
     output = {
         "generated_at": now_iso,
         "recent_window_days": RECENT_WINDOW_DAYS,
@@ -229,9 +326,19 @@ def main():
     }
     save_json(DATA_PATH, output)
 
+    fulltext_output = {
+        "generated_at": now_iso,
+        "laws": list(fulltext_results.values()),
+    }
+    save_json(FULLTEXT_PATH, fulltext_output)
+
     updated_count = sum(1 for r in results if r["updated"])
+    newly_count = sum(1 for r in results if r["newly_detected"])
     error_count = sum(1 for r in results if r["fetch_error"])
-    print(f"完成。共 {len(results)} 筆法規，{updated_count} 筆標記為近期更新，{error_count} 筆抓取失敗或未設定 pcode。")
+    print(f"完成。共 {len(results)} 筆法規，{updated_count} 筆標記為近期更新"
+          f"（其中 {newly_count} 筆是這次才新偵測到），{error_count} 筆抓取失敗或未設定 pcode。")
+    print(f"全文：{fulltext_refetched} 筆重新擷取，{fulltext_carried_over} 筆沿用舊資料，"
+          f"{fulltext_failed} 筆本次應更新但擷取失敗。")
 
 
 if __name__ == "__main__":
