@@ -11,6 +11,10 @@ check_news.py
     這一段抓到的是「新聞」，不是「法律效力」本身，請務必只當作提醒、
     自己再去查證原始新聞或官方公告，不要直接當作法規已經修正的依據。
 
+    新增：每則新聞會標記 first_seen_this_run，只有在「這次執行才第一次
+    看到這則新聞」時為 true，供 send_notification.py 判斷要不要寄信通知，
+    避免同一則新聞在 is_new（14 天視窗）期間內每天都被拿去寄信。
+
 輸出：
     data/news_feed.json
 """
@@ -122,6 +126,7 @@ def main():
                 "source": item["source"],
                 "pub_date": item["pub_date"],
                 "first_seen_at": first_seen_at,
+                "first_seen_this_run": prev is None,
             }
             all_items.append(entry)
 
@@ -135,6 +140,8 @@ def main():
             existing = dedup[item["link"]]
             if item["keyword"] not in existing["keyword"]:
                 existing["keyword"] = existing["keyword"] + "、" + item["keyword"]
+            # first_seen_this_run 只要有任一次命中是新的，就算新的
+            existing["first_seen_this_run"] = existing["first_seen_this_run"] or item["first_seen_this_run"]
 
     merged = list(dedup.values())
 
@@ -159,7 +166,9 @@ def main():
     save_json(DATA_PATH, output)
 
     new_count = sum(1 for i in merged if i["is_new"])
-    print(f"完成。共 {len(merged)} 則新聞，其中 {new_count} 則為近 {RECENT_WINDOW_DAYS} 天內新出現，{len(errors)} 個關鍵字查詢失敗。")
+    first_run_count = sum(1 for i in merged if i["first_seen_this_run"])
+    print(f"完成。共 {len(merged)} 則新聞，其中 {new_count} 則為近 {RECENT_WINDOW_DAYS} 天內新出現"
+          f"（{first_run_count} 則是這次才第一次看到），{len(errors)} 個關鍵字查詢失敗。")
 
 
 if __name__ == "__main__":
