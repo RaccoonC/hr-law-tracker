@@ -26,11 +26,21 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: 抓取法規異動
+      - name: 抓取法規異動與條文全文
         run: python scripts/check_laws.py
 
       - name: 抓取新聞與草案動態
         run: python scripts/check_news.py
+
+      - name: 寄送異動通知信（若有新異動）
+        # continue-on-error：Email 沒設定好，或寄信當下失敗，都不應該讓後面的
+        # commit 步驟跟著失敗，資料還是要正常存檔。
+        continue-on-error: true
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python scripts/send_notification.py
 
       - name: 提交異動（若有變化）
         env:
@@ -38,8 +48,8 @@ jobs:
         run: |
           git config user.name "hr-law-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/laws_status.json data/news_feed.json
-          
+          git add data/laws_status.json data/news_feed.json data/laws_fulltext.json
+
           if git diff --cached --quiet; then
             echo "沒有資料變化，略過提交"
           else
