@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T01:49:28.096374+00:00",
+  "generated_at": "2026-07-17T07:06:01.281563+00:00",
   "recent_window_days": 14,
   "laws": [
     {
@@ -10,9 +10,10 @@
       "last_amend_date": "民國113年07月31日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "最低工資法",
@@ -22,9 +23,10 @@
       "last_amend_date": null,
       "publish_date": "民國112年12月27日",
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞動事件法",
@@ -34,9 +36,10 @@
       "last_amend_date": "民國112年12月15日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "就業服務法",
@@ -46,9 +49,10 @@
       "last_amend_date": "民國114年01月20日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "大量解僱勞工保護法",
@@ -58,9 +62,10 @@
       "last_amend_date": "民國104年07月01日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "中高齡者及高齡者就業促進法",
@@ -70,9 +75,10 @@
       "last_amend_date": "民國113年07月31日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "外國專業人才延攬及僱用法",
@@ -82,9 +88,10 @@
       "last_amend_date": "民國114年09月24日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞動基準法施行細則",
@@ -94,9 +101,10 @@
       "last_amend_date": "民國113年03月27日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞動事件法施行細則",
@@ -106,9 +114,10 @@
       "last_amend_date": "民國112年08月23日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "中高齡者及高齡者就業促進法施行細則",
@@ -118,9 +127,10 @@
       "last_amend_date": "民國113年12月05日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工請假規則",
@@ -130,9 +140,10 @@
       "last_amend_date": "民國114年12月09日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "天然災害停止上班及上課作業辦法",
@@ -142,9 +153,10 @@
       "last_amend_date": "民國115年04月24日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "性別平等工作法",
@@ -154,9 +166,10 @@
       "last_amend_date": "民國112年08月16日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "身心障礙者權益保障法",
@@ -166,9 +179,10 @@
       "last_amend_date": "民國114年08月01日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "原住民族工作權保障法",
@@ -178,9 +192,10 @@
       "last_amend_date": "民國104年02月04日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "性別平等工作法施行細則",
@@ -190,9 +205,10 @@
       "last_amend_date": "民國115年04月08日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "工作場所性騷擾防治措施準則",
@@ -202,9 +218,10 @@
       "last_amend_date": "民國113年01月17日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "雇主聘僱外國人許可及管理辦法",
@@ -214,9 +231,10 @@
       "last_amend_date": "民國114年12月30日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "外國特定專業人才減免所得稅辦法",
@@ -226,9 +244,10 @@
       "last_amend_date": "民國115年03月02日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "外國特定專業人才申請就業金卡許可辦法",
@@ -238,9 +257,10 @@
       "last_amend_date": "民國114年12月31日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "外國人從事就業服務法第四十六條第一項第八款至第十款工作資格及審查標準",
@@ -250,9 +270,10 @@
       "last_amend_date": "民國115年04月11日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "外國人從事就業服務法第四十六條第一項第一款至第六款工作資格及審查標準",
@@ -262,9 +283,10 @@
       "last_amend_date": "民國113年08月01日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工保險條例",
@@ -274,9 +296,10 @@
       "last_amend_date": "民國115年01月21日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工職業災害保險及保護法",
@@ -286,9 +309,10 @@
       "last_amend_date": null,
       "publish_date": "民國110年04月30日",
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "就業保險法",
@@ -298,9 +322,10 @@
       "last_amend_date": "民國111年01月12日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工退休金條例",
@@ -310,9 +335,10 @@
       "last_amend_date": "民國108年05月15日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "全民健康保險法",
@@ -322,9 +348,10 @@
       "last_amend_date": "民國112年06月28日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工保險條例施行細則",
@@ -334,9 +361,10 @@
       "last_amend_date": "民國114年01月06日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工職業災害保險及保護法施行細則",
@@ -346,9 +374,10 @@
       "last_amend_date": "民國114年05月29日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "就業保險法施行細則",
@@ -358,9 +387,10 @@
       "last_amend_date": "民國114年12月02日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工退休金條例施行細則",
@@ -370,9 +400,10 @@
       "last_amend_date": "民國115年03月25日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "全民健康保險法施行細則",
@@ -382,9 +413,10 @@
       "last_amend_date": "民國114年10月20日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "育嬰留職停薪實施辦法",
@@ -394,9 +426,10 @@
       "last_amend_date": "民國114年11月21日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職業安全衛生法",
@@ -406,9 +439,10 @@
       "last_amend_date": "民國114年12月19日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞動檢查法",
@@ -418,9 +452,10 @@
       "last_amend_date": "民國109年06月10日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職業安全衛生法施行細則",
@@ -430,9 +465,10 @@
       "last_amend_date": "民國115年06月26日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞動檢查法施行細則",
@@ -442,9 +478,10 @@
       "last_amend_date": "民國112年12月07日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職業安全衛生設施規則",
@@ -454,9 +491,10 @@
       "last_amend_date": "民國115年06月30日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞工健康保護規則",
@@ -466,9 +504,10 @@
       "last_amend_date": "民國115年06月26日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職業安全衛生教育訓練規則",
@@ -478,9 +517,10 @@
       "last_amend_date": "民國115年06月25日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "女性勞工母性健康保護實施辦法",
@@ -490,9 +530,10 @@
       "last_amend_date": "民國113年05月31日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "性騷擾防治法",
@@ -502,9 +543,10 @@
       "last_amend_date": "民國112年08月16日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "性騷擾防治法施行細則",
@@ -514,9 +556,10 @@
       "last_amend_date": "民國113年03月06日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "性騷擾防治準則",
@@ -526,9 +569,10 @@
       "last_amend_date": "民國113年03月06日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞資爭議處理法",
@@ -538,9 +582,10 @@
       "last_amend_date": "民國110年04月28日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "勞資爭議調解辦法",
@@ -550,9 +595,10 @@
       "last_amend_date": "民國108年07月31日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "不當勞動行為裁決辦法",
@@ -562,9 +608,10 @@
       "last_amend_date": "民國110年09月29日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職工福利金條例",
@@ -574,9 +621,10 @@
       "last_amend_date": "民國104年07月01日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職工福利金條例施行細則",
@@ -586,9 +634,10 @@
       "last_amend_date": "民國105年03月11日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職工福利委員會組織準則",
@@ -598,9 +647,10 @@
       "last_amend_date": "民國110年05月14日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職業訓練法",
@@ -610,9 +660,10 @@
       "last_amend_date": "民國104年07月01日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "職業訓練法施行細則",
@@ -622,9 +673,10 @@
       "last_amend_date": "民國101年05月30日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "所得稅法",
@@ -634,9 +686,10 @@
       "last_amend_date": "民國114年12月26日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "所得基本稅額條例",
@@ -646,9 +699,10 @@
       "last_amend_date": "民國110年01月27日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     },
     {
       "name": "各類所得扣繳率標準",
@@ -658,9 +712,10 @@
       "last_amend_date": "民國110年06月30日",
       "publish_date": null,
       "updated": false,
+      "newly_detected": false,
       "updated_detected_at": null,
       "fetch_error": null,
-      "checked_at": "2026-07-17T01:49:28.096374+00:00"
+      "checked_at": "2026-07-17T07:06:01.281563+00:00"
     }
   ]
 }
