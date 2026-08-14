@@ -1,0 +1,24 @@
+{
+  // Worker 名稱，建議跟你目前 Cloudflare 專案名稱一致，這樣才會部署到同一個網址
+  "name": "hr-law-tracker",
+  "compatibility_date": "2026-01-01",
+
+  // 進入點：所有請求先經過這支程式，由它決定是回傳靜態檔案，還是處理 API
+  "main": "worker.js",
+
+  // 靜態網頁檔案設定：directory 用 "." 代表 repo 根目錄（也就是 index.html 所在位置）
+  // binding 是這支程式碼裡用來呼叫「回傳靜態檔案」功能的變數名稱
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  },
+
+  // KV 綁定：SUPPLEMENTS 是程式碼裡使用的變數名稱，id 請依照下方部署步驟，
+  // 到 Cloudflare Dashboard 建立 KV 命名空間後，把它的 ID 貼在這裡
+  "kv_namespaces": [
+    {
+      "binding": "SUPPLEMENTS",
+      "id": "67185aa00e4a4b38b6ac8b2414067699"
+    }
+  ]
+}
